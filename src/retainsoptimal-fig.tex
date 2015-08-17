@@ -4,11 +4,7 @@
 
 \begin{tikzpicture}
 
-\node(s1)[red subgraph] at (0,0) {};
-\node(v)[red node] at (1.3,0.5) {};
-\node(s2)[red subgraph] at (2.6,1) {};
-
-\draw (s1) -- (v) -- (s2);
+\node(s1)[red subgraph, large subgraph] at (0,0) {};
 
 \end{tikzpicture}
 }
@@ -16,11 +12,9 @@
 \subfloat[After]{
 \begin{tikzpicture}
 
-\node(s1)[red subgraph] at (0,0) {};
-\node(v)[green node] at (1.3,0.5) {};
-\node(s2)[green subgraph] at (2.6,1) {};
-
-\draw (s1) -- (v) -- (s2);
+\node(s1)[uncolored subgraph, large subgraph] at (0,0) {};
+\node(v1)[green node] at (-0.5,-0.5) {};
+\node(v2)[red node] at (0.5,0.5) {};
 
 \end{tikzpicture}
 }
