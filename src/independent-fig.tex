@@ -1,0 +1,38 @@
+\begin{figure}
+\centering
+\begin{tikzpicture}
+
+
+\only<1>{\graph[random seed=1, spring layout, node distance=15mm] {
+	1[red node],2[red node];
+	3[blue node],4[blue node];
+	5[green node],6[green node];
+	7[orange node],8[orange node];
+	9[pink node],10[pink node];
+	11[teal node],12[teal node];
+
+	1 -- 9 -- 7 -- 6 -- 3;
+	6 -- 4;	
+	2 -- 9 -- 7 -- 5 -- 10 -- 8;
+	11 -- 4 -- 10 -- 12;
+}};
+
+\only<2>{\graph[random seed=1, spring layout, node distance=15mm] {
+	1[red node],2[red node];
+	3[blue node],4[blue node];
+	5[green node,blur],6[green node];
+	7[orange node, blur],8[orange node,blur];
+	9[pink node],10[pink node,blur];
+	11[teal node,blur],12[teal node,blur];
+
+	1 -- 9 -- 2;
+	3 -- 6 -- 4;
+	9 --[blur] 7 --[blur] 6 -- 3;
+	6 -- 4;	
+	7 --[blur] 5 --[blur] 10 --[blur] 8;
+	11 --[blur] 4 --[blur] 10 --[blur] 12;
+}};
+
+
+\end{tikzpicture}
+\end{figure}

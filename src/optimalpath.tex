@@ -1,0 +1,31 @@
+\begin{frame}{Optimal (Partial) Path Recoloring}
+
+\begin{figure}
+\centering
+\subfloat[Optimal Retains all Recoloring]{\begin{tikzpicture}
+
+\node[green subgraph](1) at (0,0) {};
+\node[red subgraph](2) at (1.5,2) {};
+\node[blue subgraph](3) at (3,0) {};
+
+\draw (1) -- (2) -- (3) -- (1);
+
+
+\end{tikzpicture}}\hfill
+\subfloat[Optimal (Partial) Path Recoloring]{\begin{tikzpicture}
+
+\node[uncolored subgraph](1) at (0,0) {};
+\node[uncolored subgraph](2) at (1.5,2) {};
+\node[uncolored subgraph](3) at (3,0) {};
+
+\draw (1) -- (2) -- (3) -- (1);
+\draw[green path] 
+($(1.west) + (2mm, 2mm)$) .. controls (1.north) and (1.south) .. ($(1.east) + (-2mm, 2mm)$);
+\draw[red path] 
+($(2.west) + (2mm, 2mm)$) .. controls (2.north) and (2.south) .. ($(2.east) + (-2mm, 2mm)$);
+\draw[blue path] 
+($(3.west) + (2mm, 2mm)$) .. controls (3.north) and (3.south) .. ($(3.east) + (-2mm, 2mm)$);
+
+\end{tikzpicture}}
+\end{figure}
+\end{frame}

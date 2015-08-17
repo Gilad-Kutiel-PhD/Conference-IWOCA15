@@ -1,0 +1,78 @@
+\begin{figure}
+\centering
+\subfloat[Input]{
+\begin{tikzpicture}
+
+\node[red node](v1) at (0,0) {1};
+\node[pink node](v2) at (1,0) {2};
+\node[red node](v3) at (2,0) {3};
+
+\node[blue node](v4) at (2,1) {4};
+\node[blue node](v5) at (3,1) {5};
+
+\node[green node](v6) at (1,2) {6};
+\node[green node](v7) at (3,2) {7};
+
+\node[orange node](v8) at (2,3) {8};
+\node[orange node](v9) at (3,3) {9};
+
+\draw (v1) -- (v2);
+\draw (v1) -- (v6);
+
+\draw (v2) -- (v3);
+\draw (v2) -- (v4);
+
+\draw (v3) -- (v4);
+\draw (v3) -- (v5);
+
+\draw (v4) -- (v6);
+\draw (v4) -- (v7);
+
+\draw (v6) -- (v8);
+
+\draw (v7) -- (v8);
+\draw (v7) -- (v9);
+
+\draw (v8) -- (v9);
+
+\end{tikzpicture}
+}
+\hfill
+\subfloat[Output]{
+\begin{tikzpicture}
+
+\node[red node](v1) at (0,0) {1};
+\node[pink node](v2) at (1,0) {2};
+\node[blue node](v3) at (2,0) {3};
+
+\node[blue node](v4) at (2,1) {4};
+\node[blue node](v5) at (3,1) {5};
+
+\node[green node](v6) at (1,2) {6};
+\node[green node](v7) at (3,2) {7};
+
+\node[green node](v8) at (2,3) {8};
+\node[orange node](v9) at (3,3) {9};
+
+\draw (v1) -- (v2);
+\draw (v1) -- (v6);
+
+\draw (v2) -- (v3);
+\draw (v2) -- (v4);
+
+\draw (v3) -- (v4);
+\draw (v3) -- (v5);
+
+\draw (v4) -- (v6);
+\draw (v4) -- (v7);
+
+\draw (v6) -- (v8);
+
+\draw (v7) -- (v8);
+\draw (v7) -- (v9);
+
+\draw (v8) -- (v9);
+
+\end{tikzpicture}
+}
+\end{figure}

@@ -1,0 +1,40 @@
+\documentclass{beamer}
+\mode<presentation>
+\usetheme{Berkeley}
+\usecolortheme{crane}
+
+\usepackage{lmodern}
+\usepackage[caption=false]{subfig}
+\captionsetup[subfigure]{labelformat=empty}
+
+\usepackage{tikz}
+\usetikzlibrary{
+shapes,
+graphdrawing,
+graphs,
+arrows,
+calc,
+}
+\usegdlibrary{force}
+
+\input{def}
+
+\begin{document}
+
+\input{title}
+
+\section{Problem Statement}
+\input{convex}
+\input{2convex}
+
+\section{Special Recoloring}
+\input{partial}
+\input{retains}
+\input{retainsoptimal}
+\input{path}
+\input{optimalpath}
+
+\section{Independent Path Set}
+\input{independent}
+
+\end{document}

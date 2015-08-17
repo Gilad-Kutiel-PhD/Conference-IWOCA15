@@ -1,0 +1,44 @@
+\begin{figure}
+\centering
+\subfloat[Input]{
+
+\begin{tikzpicture}
+
+\node[red node](1) at (0, 0){};
+\node[blue node](2) at (1, 0){};
+\node[red node](3) at (2, 0){};
+
+\draw (1) -- (2) -- (3);
+
+\end{tikzpicture}
+
+}\\
+\subfloat[Not Retains All]{
+
+\begin{tikzpicture}
+
+\node[red node](1) at (0, 0){};
+\node[red node](2) at (1, 0){};
+\node[red node](3) at (2, 0){};
+
+\draw (1) -- (2) -- (3);
+
+\end{tikzpicture}
+
+
+}\\
+\subfloat[Retains All]{
+
+\begin{tikzpicture}
+
+\node[red node](1) at (0, 0){};
+\node[blue node](2) at (1, 0){};
+\node[uncolored node](3) at (2, 0){};
+
+\draw (1) -- (2) -- (3);
+
+\end{tikzpicture}
+
+
+}
+\end{figure}

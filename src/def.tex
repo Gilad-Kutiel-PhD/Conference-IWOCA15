@@ -1,0 +1,58 @@
+\tikzset{
+	colored node/.style={
+		draw,
+		circle,
+		inner sep=0mm,
+		minimum size=6mm,
+	},
+%
+%
+	red node/.style={colored node, fill=red},
+	blue node/.style={colored node, fill=blue},
+	green node/.style={colored node, fill=green},
+	orange node/.style={colored node, fill=orange},
+	pink node/.style={colored node, fill=pink},
+	teal node/.style={colored node, fill=teal},
+	violet node/.style={colored node, fill=violet},
+	uncolored node/.style={colored node, fill=none},
+%
+%
+	colored path/.style={
+		red,
+		thick,
+		*-*,
+	},
+	red path/.style={colored path, red},
+	blue path/.style={colored path, blue},
+	green path/.style={colored path, green},
+%
+%	
+	colored subgraph/.style={
+		draw, 
+		minimum size=2cm, 
+		cloud, 
+		cloud puffs=5, 
+		cloud puff arc=140,
+		rotate=20,
+	}, 
+% 	
+% 	
+	red subgraph/.style={colored subgraph, fill=red},
+	green subgraph/.style={colored subgraph, fill=green},
+	blue subgraph/.style={colored subgraph, fill=blue},
+	uncolored subgraph/.style={colored subgraph, fill=none},
+%
+%
+	focus/.style={
+		dashed, 
+		very thick,
+	},
+%
+%
+	blur/.style={
+		opacity=.2,
+		text opacity=.3,
+	},	
+% 	
+%
+}
