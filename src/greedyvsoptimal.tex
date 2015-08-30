@@ -1,0 +1,33 @@
+\begin{frame}{Greedy vs Optimal (retains all)}
+\begin{itemize}
+
+\item \textbf<1>
+{Let $I$ be the packing of greedy and $I^*$ the packing of an optimal packing}
+
+\item \textbf<2>
+{Let $\alpha := \frac{|I^*|}{|I|}$ }
+
+\item \textbf<3>
+{Let $|V|$ be the number of pairs in a 2-CR instance}
+
+\item \textbf<4>
+{We would like to upper bound the ratio $r := \frac{|V| - |I|}{|V| - |I^*|}$}
+
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Greedy vs Optimal (retains all)}
+	
+\begin{lemma}
+$$ |V| \geq 2 \cdot |I^*| $$
+\end{lemma}
+
+\begin{proof}
+Clearly, Greedy packs all connected pairs, so we can remove connect pairs 
+from $I$ and $I^*$without affecting our analysis. 
+It follows then, that every subgraph in $I^*$ has at least 2 colors. 
+\end{proof}
+
+\end{frame}
+
