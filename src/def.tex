@@ -23,7 +23,10 @@
 		red,
 		thick,
 		*-*,
+		decoration=snake,
+		decorate,
 	},
+	black path/.style={colored path, black},
 	red path/.style={colored path, red},
 	blue path/.style={colored path, blue},
 	green path/.style={colored path, green},
@@ -36,6 +39,9 @@
 		cloud puffs=5, 
 		cloud puff arc=140,
 		rotate=20,
+	},
+	small subgraph/.style={
+		minimum size=0.6cm,
 	},
 	large subgraph/.style={
 		minimum size=3.5cm, 

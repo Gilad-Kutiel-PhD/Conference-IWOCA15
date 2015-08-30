@@ -1,0 +1,28 @@
+\begin{figure} \centering \begin{tikzpicture}
+
+\node at (1,0) {$I$};
+\draw[black path] 	(0.5,-1) -- (1.5,-1) node(p1)[right] {$p_1$};
+\draw[black path] 	(0.5,-2) -- (1.5,-2) node(p2)[right] {$p_2$};
+\node at (1, -3)	{$\vdots$};
+\draw[black path] 	(0.5,-4) -- (1.5,-4) node(pi)[right] {$p_{|I|}$};
+
+\node at (6,0) {$I^*$};
+
+\node(s1)[colored subgraph, small subgraph] at (6, -1) {};
+\node(l1)[left=1mm of s1] {$s_1$};
+\node(s2)[colored subgraph, small subgraph] at (6, -2) {};
+\node(l2)[left=1mm of s2] {$s_2$};
+\node(ldots) at (6, -3)	{$\vdots$};
+\node(si)[colored subgraph, small subgraph] at (6, -4) {};
+\node(li)[left=1mm of si] {$s_{|I^*|}$};
+
+\draw[->] (p1) -- (l1);
+
+\draw[->] (p2) -- (l2);
+\draw[->] (p2) -- ($(ldots.north) - (1,0)$);
+\draw[->] (p2) -- ($(ldots) - (1,0)$);
+
+\draw[->] (pi) -- ($(ldots.south) - (1,0)$);
+\draw[->] (pi) -- (li);
+
+\end{tikzpicture} \end{figure}
