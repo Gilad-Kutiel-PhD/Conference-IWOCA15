@@ -3,23 +3,26 @@
 \graph[
 random seed=1,
 spring layout,
-node distance=15mm,
+node distance=18mm,
 spring constant=1,
 ] {
 
 1[red node],2[red node];
-3[blue node],4[blue node];
-5[green node],6[green node];
+3[blue node, onslide=<7->{blur}],4[blue node, onslide=<8->{orange node}];
+5[green node, onslide=<7->{blur}],6[green node, onslide=<8->{orange node}];
 7[orange node],8[orange node];
 9[pink node],10[pink node];
-11[teal node],12[teal node];
+11[teal node, onslide=<5->{blur}],12[teal node, onslide=<8->{pink node}];
+13[violet node, onslide=<8->{uncolored node}], 14[violet node];
 
 1 -- 2;
 9 -- 12 -- 10;
-3 -- 2 -- 4;
-5 -- 3 -- 7 -- 6;
+3 --[onslide=<3->{blur}] 2 --[onslide=<3->{blur}] 4;
+5 --[onslide=<7->{blur}] 3 --[onslide=<7->{blur}] 7 -- 6;
 7 -- 6 -- 4 -- 8;
-11 -- 8 -- 4 -- 3 -- 5 -- 12;
+11 --[onslide=<5->{blur}] 8;
+5 --[onslide=<5->{blur}] 12;
+13 --[onslide=<5->{blur}] 11 --[onslide=<5->{blur}] 14;
 
 };
 
@@ -28,17 +31,17 @@ spring constant=1,
 (2.south) to[out=180, in=180] 
 (1.north);
 
-\draw<3->[packing]
-(9.south) to[out=0, in=-90] 
-(12.east) to[out=90, in=0]
-(10.north) to[out=180, in=180]
-(9.south);
-
 \draw<4->[packing]
-(8.east) to[out=90, in=90]
-(4.west) to[out=-90, in=90]
-(7.west) to[out=-90, in=-90]
-(6.east) to[out=90, in=-90]
-(8.east);
+(9.north) to[out=180, in=90] 
+(12.west) to[out=-90, in=180]
+(10.south) to[out=0, in=0]
+(9.north);
+
+\draw<6->[packing]
+(8.west) to[out=90, in=90]
+(4.east) to[out=-90, in=90]
+(7.east) to[out=-90, in=-90]
+(6.west) to[out=90, in=-90]
+(8.west);
 
 \end{tikzpicture}\end{figure}
