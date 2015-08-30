@@ -1,0 +1,44 @@
+\begin{figure}\begin{tikzpicture}
+
+\graph[
+random seed=1,
+spring layout,
+node distance=15mm,
+spring constant=1,
+] {
+
+1[red node],2[red node];
+3[blue node],4[blue node];
+5[green node],6[green node];
+7[orange node],8[orange node];
+9[pink node],10[pink node];
+11[teal node],12[teal node];
+
+1 -- 2;
+9 -- 12 -- 10;
+3 -- 2 -- 4;
+5 -- 3 -- 7 -- 6;
+7 -- 6 -- 4 -- 8;
+11 -- 8 -- 4 -- 3 -- 5 -- 12;
+
+};
+
+\draw<2->[packing]
+(1.north) to[out=0, in=0] 
+(2.south) to[out=180, in=180] 
+(1.north);
+
+\draw<3->[packing]
+(9.south) to[out=0, in=-90] 
+(12.east) to[out=90, in=0]
+(10.north) to[out=180, in=180]
+(9.south);
+
+\draw<4->[packing]
+(8.east) to[out=90, in=90]
+(4.west) to[out=-90, in=90]
+(7.west) to[out=-90, in=-90]
+(6.east) to[out=90, in=-90]
+(8.east);
+
+\end{tikzpicture}\end{figure}

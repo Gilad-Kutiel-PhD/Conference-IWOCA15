@@ -54,12 +54,12 @@
 \node[orange node](v8) at (2,3) {8};
 \node[orange node](v9) at (3,3) {9};
 
-\draw[dashed, very thick] 
+\draw[packing] 
 (v9.east) to[out=90,in=90] 
 (v8.west) to[out=-90,in=-90] 
 (v9.east); 
 
-\draw[dashed, very thick] 
+\draw[packing] 
 (v5.east) to[out=-90,in=0] 
 (v3.south) to[out=180,in=-90] 
 (v4.west) to[out=90,in=90] 

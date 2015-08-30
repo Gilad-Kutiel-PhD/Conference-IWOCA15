@@ -1,14 +1,14 @@
 #TeXlipse project settings
-#Tue Aug 11 09:19:13 IDT 2015
+#Wed Aug 19 11:22:13 IDT 2015
 markTmpDer=true
 builderNum=8
-outputDir=out
+outputDir=out/
 makeIndSty=
 bibrefDir=
 outputFormat=pdf
 tempDir=tmp
 mainTexFile=main.tex
-outputFile=main.pdf
+outputFile=iwoca15.pdf
 langSpell=en
 markDer=true
-srcDir=src
+srcDir=src/
