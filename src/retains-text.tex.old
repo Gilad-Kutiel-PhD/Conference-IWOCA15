@@ -1,6 +1,7 @@
 \only<1-2>{
 \begin{itemize}
-\item \textbf<1>{Every color survives}
+\item<1->
+Every color survives
 \item \textbf<2>{The induced sub-graph contains at least one original vertex}
 \end{itemize}
 }

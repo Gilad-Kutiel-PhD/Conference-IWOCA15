@@ -1,12 +1,18 @@
 \begin{frame}{Mapping Properties}
-This mapping has the following properties:
+The mapping has the following properties:
 \begin{enumerate}
 
-\item
-$\forall p \in I, \quad |\{(p,s)\}| \leq |p|$
+\item<1->
+$$\forall (p, s) \in M, \quad |p| \leq |s|$$
 
-\item
-$\forall (p, s) \in M, \quad |p| \leq |s|$
+\item<2->
+$$\forall p \in I, \quad d_p \leq |p| - 1$$
+
+\item<3->
+$$\sum_{p \in I}{d_p} = |I^*| = \alpha \cdot |I|$$
+
+\item<4->
+$$|P| \geq \sum_{s \in I^*}{d_s - 1}$$
 
 \end{enumerate}
 \end{frame}
