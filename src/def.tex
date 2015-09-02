@@ -2,6 +2,14 @@
 
 \tikzset{onslide/.code args={<#1>#2}{\only<#1>{\pgfkeysalso{#2}}}}
 \tikzset{
+	/tikz/graphs/default graph/.style={
+		random seed=1,
+		spring layout,
+		spring constant=1,
+		node distance=12mm,	
+	},
+%
+%
 	colored node/.style={
 		draw,
 		circle,
@@ -11,7 +19,7 @@
 %
 %
 	red node/.style={colored node, fill=red},
-	blue node/.style={colored node, fill=blue},
+	blue node/.style={colored node, fill=blue!50},
 	green node/.style={colored node, fill=green},
 	orange node/.style={colored node, fill=orange},
 	pink node/.style={colored node, fill=pink},
@@ -70,5 +78,7 @@
 	packing/.style={
 		dashed, 
 		very thick,	
-	}
+	},
+%
+%
 }
