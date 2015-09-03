@@ -16,13 +16,13 @@
 \node(si)[colored subgraph, small subgraph] at (5, -4) {};
 \node(li)[left=1mm of si] {$s_{|I^*|}$};
 
-\draw[->] (p1) -- (l1);
+\draw[<-] (p1) -- (l1);
 
-\draw[->] (p2) -- (l2);
-\draw[->] (p2) -- ($(ldots.north) - (1,0)$);
-\draw[->] (p2) -- ($(ldots) - (1,0)$);
+\draw[<-] (p2) -- (l2);
+\draw[<-] (p2) -- ($(ldots.north) - (1,0)$);
+\draw[<-] (p2) -- ($(ldots) - (1,0)$);
 
-\draw[->] (pi) -- ($(ldots.south) - (1,0)$);
-\draw[->] (pi) -- (li);
+\draw[<-] (pi) -- ($(ldots.south) - (1,0)$);
+\draw[<-] (pi) -- (li);
 
 \end{tikzpicture} \end{figure}

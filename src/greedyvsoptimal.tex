@@ -1,8 +1,7 @@
-\begin{frame}{Greedy vs (retains all) Optimal}
+\begin{frame}{Greedy vs Optimal}
+Definitions:
 \begin{itemize}
-
-
-\item
+\pause\item
 Let $I$ be the packing of greedy and $I^*$ the packing of an optimal packing
 
 \pause\item
@@ -11,14 +10,18 @@ Let $\alpha := \frac{|I^*|}{|I|}$
 \pause\item
 Let $|P|$ be the number of pairs in a 2-CR instance
 
-\pause\item
-We would like to upper bound the ratio $r := \frac{|P| - |I|}{|P| - |I^*|}$
+\end{itemize}
+
+\pause
+The approximation ratio of the convex recoloring is given by
+$$ r := \frac{|P| - |I|}{|P| - |I^*|} $$
 
 \begin{itemize}
+\pause\item
+We would like to \textbf{upper bound} this ratio
 \pause\item
 Can be done by \textbf{lower bounding the size of $P$}
 \end{itemize}
 
 
-\end{itemize}
 \end{frame}
