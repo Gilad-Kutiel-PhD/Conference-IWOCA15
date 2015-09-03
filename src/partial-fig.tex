@@ -4,17 +4,17 @@
 \begin{tikzpicture}
 
 
-\graph[default graph]{
+\graph[default graph, node distance=10mm]{
 	{[nodes={uncolored node}]1,2};
 	{[nodes={blue node}]3,4};
 	{[nodes={green node}]5,6};
 	{[nodes={uncolored node}]7,8};
 	{[nodes={pink node}]9};
 	
-	1 -- 9 -- 4 -- 6;
+	9 -- 4 -- 6;
 	2 -- 7 -- 4;
 	3 -- 7;
-	2 -- 5 -- 6;
+	2 -- 5 -- 6 -- 1;
 	8 -- 5;
 };
 
@@ -25,7 +25,7 @@
 \begin{tikzpicture}
 
 
-\graph[default graph]{
+\graph[default graph, node distance=10mm]{
 	{[nodes={uncolored node}]1,2};
 	{[nodes={blue node}]3,4};
 	{[nodes={green node}]5,6};
@@ -33,10 +33,10 @@
 	{[nodes={uncolored node}]8};
 	{[nodes={pink node}]9};
 	
-	1 -- 9 -- 4 -- 6;
+	9 -- 4 -- 6;
 	2 -- 7 -- 4;
 	3 -- 7;
-	2 -- 5 -- 6;
+	2 -- 5 -- 6 -- 1;
 	8 -- 5;
 };
 

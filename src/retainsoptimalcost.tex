@@ -2,16 +2,19 @@
 \begin{itemize}
 
 \item
-A pair \emph{survives} if both vertices with the same color survive
+A pair \alert{survives} if both vertices with the same color survive
+
+\pause\item
+Let $P$ be the set of pairs in the input  
+
+\pause\item
+Let $I$ be the set of survived pairs
+ 
+\pause\item 
+The cost of a retains-all recoloring equal to $|P| - |I|$
 
 \pause\item 
-The cost of a retains-all recoloring is the number of pairs that did not survive
-
-\pause\item 	 
-In other words, the number of pairs minus the number of pairs that survive
-
-\pause\item 
-That is, we would like to \textbf{maximize the number of pairs that survive}
+That is, we would like to \textbf{maximize $|I|$}
 
 
 \end{itemize}

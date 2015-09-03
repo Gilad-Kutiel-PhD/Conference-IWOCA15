@@ -1,18 +1,26 @@
-\begin{frame}{Mapping Properties}
+\begin{frame}{Second Bound}
 The mapping has the following properties:
+\begin{minipage}{0.48\linewidth}
+
+\input{mapping-fig}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+
 \begin{enumerate}
+\pause\item
+$\forall (p, s) \in M, \quad |p| \leq |s|$
 
-\item<1->
-$$\forall (p, s) \in M, \quad |p| \leq |s|$$
+\pause\item
+$\forall p \in I, \quad d_p \leq |p| - 1$
 
-\item<2->
-$$\forall p \in I, \quad d_p \leq |p| - 1$$
+\pause\item
+$\sum_{p \in I}{d_p} = |I^*| = \alpha \cdot |I|$
 
-\item<3->
-$$\sum_{p \in I}{d_p} = |I^*| = \alpha \cdot |I|$$
-
-\item<4->
-$$|P| \geq \sum_{s \in I^*}{d_s - 1}$$
-
+\pause\item
+$|P| \geq \sum_{s \in I^*}{(|s| - 1)}$
 \end{enumerate}
+
+\end{minipage}
 \end{frame}

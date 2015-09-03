@@ -1,4 +1,9 @@
-\renewcommand{\arraystretch}{1.5}
+\setbeamertemplate{navigation symbols}{
+\usebeamerfont{footline}
+\usebeamercolor[fg]{footline}
+\hspace{1em}
+\insertframenumber/\inserttotalframenumber
+}
 
 \tikzset{onslide/.code args={<#1>#2}{\only<#1>{\pgfkeysalso{#2}}}}
 \tikzset{
@@ -57,10 +62,11 @@
 	},
 % 	
 % 	
+	some subgraph/.style={colored subgraph, fill=gray!40},
 	red subgraph/.style={colored subgraph, fill=red},
 	green subgraph/.style={colored subgraph, fill=green},
 	blue subgraph/.style={colored subgraph, fill=blue},
-	uncolored subgraph/.style={colored subgraph, fill=none},
+	uncolored subgraph/.style={colored subgraph, fill=white},
 %
 %
 	focus/.style={
