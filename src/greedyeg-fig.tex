@@ -26,22 +26,28 @@ spring constant=1,
 
 };
 
-\draw<2->[packing]
+\onslide<2->{
+\draw[packing]
 (1.north) to[out=0, in=0] 
 (2.south) to[out=180, in=180] 
 (1.north);
+}
 
-\draw<4->[packing]
+\onslide<4->{
+\draw[packing]
 (9.north) to[out=180, in=90] 
 (12.west) to[out=-90, in=180]
 (10.south) to[out=0, in=0]
 (9.north);
+}
 
-\draw<6->[packing]
+\onslide<6->{
+\draw[packing]
 (8.west) to[out=90, in=90]
 (4.east) to[out=-90, in=90]
 (7.east) to[out=-90, in=-90]
 (6.west) to[out=90, in=-90]
 (8.west);
+}
 
 \end{tikzpicture}\end{figure}
