@@ -1,17 +1,16 @@
 \begin{frame}{First Bound}
-	
-\begin{lemma}
+
+Every \pack{} in $I^*$ has more than two colors
+(safe assumption)
+
+\pause
+\begin{observation}
 $$ |P| \geq 2 \cdot |I^*| $$
-\end{lemma}
+\end{observation}
 
-\pause\begin{proof}
-Clearly, Greedy packs all connected pairs, so we can remove connect pairs 
-from $I$ and $I^*$without affecting our analysis. 
-It follows then, that every subgraph in $I^*$ has at least 2 colors. 
-\end{proof}
-
-\pause\begin{corollary}
-$$r \leq \frac{2 \alpha - 1}{\alpha} \leq 2$$
+\pause
+\begin{corollary}
+$$r := \frac{|P| - |I|}{|P| - |I^*|} \leq 2 - \frac{1}{\alpha} \leq 2$$
 \end{corollary}
 
 

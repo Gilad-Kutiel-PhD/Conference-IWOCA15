@@ -6,7 +6,8 @@
 
 \STATE $I \gets \emptyset$
 \WHILE{$I$ is not maximal}
-\STATE $I \gets I \cup \{\text{smallest package independent of $I$}\}$
+\STATE $c_{small} \gets \argmin\{c : I \cup \{c\} \text{ is independent }\}$
+\STATE $I \gets I \cup \{ c_{small} \}$
 \ENDWHILE
 \RETURN $I$
 

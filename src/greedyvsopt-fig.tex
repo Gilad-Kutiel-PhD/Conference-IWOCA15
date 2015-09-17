@@ -1,0 +1,142 @@
+\begin{figure}
+\begin{tikzpicture}
+
+\node(grd) at(-1,1.4) {Greedy};
+\node(opt) at(4,1.4) {Optimal};
+
+\graph[
+random seed=1,
+spring layout,
+node distance=15mm,
+] {
+
+{[nodes={onslide=<4->{hide}}, edges={onslide=<4->{hide}}]
+{[nodes={red node, onslide=<5->{show}}] 1, 2},
+{[nodes={blue node}] 3[onslide=<5->{show}], 4},
+{[nodes={green node}] 5, 6},
+{[nodes={orange node}] 7, 8},
+{[nodes={pink node, onslide=<8->{show}}] 9, 10},
+{[nodes={teal node}] 11[onslide=<8->{show}], 12},
+{[nodes={violet node}] 13, 14},
+{[nodes={olive node}] 15, 16},
+{[edges={onslide=<5->{show}}]1 -- 3 -- 2} -- 4,
+5 -- 1 -- 6,
+7 -- 3 -- 8,
+{[edges={onslide=<8->{show}}]9 -- 11 -- 10} -- 12,
+13 -- 9 -- 14,
+15 -- 11 -- 16,
+15 -- 12,
+4 -- 16 -- 10,
+14 -- 6,
+9 -- 8
+};
+
+
+{[nodes={red node}] 1'/1, 2'/2[onslide=<4->{hide}]};
+{[nodes={blue node}] 3'/3, 4'/4[onslide=<4->{hide}]};
+{[nodes={green node}] 5'/5, 6'/6};
+{[nodes={orange node}] 7'/7, 8'/8};
+{[nodes={pink node}] 9'/9, 10'/10[onslide=<4->{hide}]};
+{[nodes={teal node}] 11'/11, 12'/12[onslide=<4->{hide}]};
+{[nodes={violet node}] 13'/13, 14'/14};
+{[nodes={olive node}] 15'/15, 16'/16};
+
+{[edges={onslide=<4->{hide}}]1' -- 3' -- 2' -- 4'};
+5' -- 1' -- 6';
+7' -- 3' -- 8';
+
+{[edges={onslide=<4->{hide}}] 9' -- 11' -- 10' -- 12'};
+13' -- 9' -- 14';
+15' -- 11' -- 16';
+
+15' --[onslide=<4->{hide}] 12';
+{[edges={onslide=<4->{hide}}]4' -- 16' -- 10'};
+14' --[onslide=<4->{hide}] 6';
+9' --[onslide=<4->{hide}] 8';
+};
+
+%% GREEDY PACKING
+\onslide<2-3,5->{
+\draw[packing]
+(1.north)	to[out=0,in=90]
+(2.east)	to[out=-90,in=0]
+(2.south)	to[out=180,in=180]
+(1.north);
+}
+
+\onslide<2-3,8->{
+\draw[packing]
+(9.north)	to[out=0,in=90]
+(10.east)	to[out=-90,in=0]
+(10.south)	to[out=180,in=180]
+(9.north);
+}
+
+
+%% OPT PACKING
+\onslide<3->{
+\draw[packing]
+(6'.west)	to[out=90,in=90]
+(5'.east)	to[out=-90,in=0]
+(1'.south)	to[out=180,in=-90]
+(6'.west);
+
+\draw[packing]
+(8'.west)	to[out=90,in=90]
+(7'.east)	to[out=-90,in=-90]
+(8'.west);
+
+\draw[packing]
+(13'.west)	to[out=90,in=180]
+(14'.north)	to[out=0,in=0]
+(9'.south)	to[out=180,in=-90]
+(13'.west);
+
+\draw[packing]
+(15'.west)	to[out=90,in=180]
+(11'.north)	to[out=0,in=90]
+(16'.east)	to[out=-90,in=0]
+(16'.south)	to[out=180,in=0]
+(11'.south)	to[out=180,in=0]
+(15'.south)	to[out=180,in=-90]
+(15'.west);
+}
+
+%% MAPPING
+\onslide<6->{
+\draw[mapping]
+(6'.west)	to[out=180,in=90]
+(1.north);
+}
+
+\onslide<7->{
+\draw[mapping]
+(8'.west)	to[out=90,in=90]
+(1.north);
+}
+
+\onslide<9->{
+\draw[mapping]
+(15'.south)	to[out=180,in=-90]
+(10.south);
+}
+
+\onslide<10->{
+\draw[mapping]
+(9'.south)	to[out=180,in=-90]
+(10.south);
+}
+
+%% CALLOUTS
+\onslide<11->{
+\node[text width=2.2cm, callout={(1.north)}] at (-3, 0) 
+{less conflicts than the size of the component};
+}
+
+\onslide<12->{
+\node[text width=3.1cm, callout={(15'.south)}] at (4.4, -4.8) 
+{the optimal component is not smaller than the greedy one};
+}
+
+\end{tikzpicture}
+\end{figure}

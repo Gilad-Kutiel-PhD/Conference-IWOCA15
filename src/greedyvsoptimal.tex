@@ -1,20 +1,25 @@
 \begin{frame}{Greedy vs Optimal}
-Definitions:
+Notation:
 \begin{itemize}
 \pause\item
-Let $I$ be the packing of greedy and $I^*$ the packing of an optimal packing
+\textbf{$I$}: the packing of greedy
 
 \pause\item
-Let $\alpha := \frac{|I^*|}{|I|}$ 
+\textbf{$I^*$}: the packing of optimal algorithm
 
 \pause\item
-Let $|P|$ be the number of pairs in a 2-CR instance
+$\alpha := \frac{|I^*|}{|I|}$ 
+
+\pause\item
+$|P|$ be the number of pairs in a 2-CR instance
 
 \end{itemize}
 
 \pause
-The approximation ratio of the convex recoloring is given by
+\begin{observation}
+The approximation ratio is
 $$ r := \frac{|P| - |I|}{|P| - |I^*|} $$
+\end{observation}
 
 \begin{itemize}
 \pause\item
