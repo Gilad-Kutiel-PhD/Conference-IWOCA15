@@ -5,7 +5,7 @@
 \node(opt) at(4,1.4) {Optimal};
 
 \graph[
-random seed=1,
+random seed=2,
 spring layout,
 node distance=15mm,
 ] {
@@ -19,12 +19,13 @@ node distance=15mm,
 {[nodes={teal node}] 11[onslide=<8->{show}], 12},
 {[nodes={violet node}] 13, 14},
 {[nodes={olive node}] 15, 16},
+{[nodes={cyan node}] 17, 18},
 {[edges={onslide=<5->{show}}]1 -- 3 -- 2} -- 4,
 5 -- 1 -- 6,
 7 -- 3 -- 8,
 {[edges={onslide=<8->{show}}]9 -- 11 -- 10} -- 12,
 13 -- 9 -- 14,
-15 -- 11 -- 16,
+15 -- 17 -- 11 -- 16 -- 18,
 15 -- 12,
 4 -- 16 -- 10,
 14 -- 6,
@@ -40,6 +41,7 @@ node distance=15mm,
 {[nodes={teal node}] 11'/11, 12'/12[onslide=<4->{hide}]};
 {[nodes={violet node}] 13'/13, 14'/14};
 {[nodes={olive node}] 15'/15, 16'/16};
+{[nodes={cyan node}] 17'/17, 18'/18[onslide=<4->{hide}]},
 
 {[edges={onslide=<4->{hide}}]1' -- 3' -- 2' -- 4'};
 5' -- 1' -- 6';
@@ -47,7 +49,7 @@ node distance=15mm,
 
 {[edges={onslide=<4->{hide}}] 9' -- 11' -- 10' -- 12'};
 13' -- 9' -- 14';
-15' -- 11' -- 16';
+15' -- 17' -- 11' -- 16' --[onslide=<4->{hide}] 18';
 
 15' --[onslide=<4->{hide}] 12';
 {[edges={onslide=<4->{hide}}]4' -- 16' -- 10'};
