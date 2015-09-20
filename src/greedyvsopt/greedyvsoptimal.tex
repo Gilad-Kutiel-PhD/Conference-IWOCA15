@@ -11,22 +11,19 @@ $I^*$: optimal packing
 \pause\item
 $\alpha := \frac{|I^*|}{|I|}$ 
 
-\pause\item
-$|P|$ be the number of pairs in a 2-CR instance
-
 \end{itemize}
 
 \pause
 \begin{observation}
 The approximation ratio for 2-CR is
-$$ r := \frac{|P| - |I|}{|P| - |I^*|} $$
+$$ r := \frac{|P| - |I|}{|P| - |I^*|} = \frac{|P| - |I|}{|P| - \alpha|I|}$$
 \end{observation}
 
 \begin{itemize}
 \pause\item
-We would like to \textbf{upper bound} this ratio
+We need to \textbf{upper bound} $r$
 \pause\item
-Can be done by \textbf{lower bounding the size of $P$}
+Can be done by \textbf{lower bounding} $|P|$
 \end{itemize}
 
 

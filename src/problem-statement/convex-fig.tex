@@ -1,22 +1,6 @@
 \begin{figure}
 \centering
-\subfloat[Non-Convex]{
-\begin{tikzpicture}
-
-
-\graph[default graph]{
-	{[nodes={red node}]2,3,4};
-	{[nodes={blue node}]1,5,6};
-	{[nodes={green node}]7};
-	1 -- 4 -- 6;
-	2 -- 7 -- 4;
-	3 -- 7;
-	2 -- 5 -- 6;
-};
-
-
-\end{tikzpicture}}\hfill
-\pause\subfloat[Convex]{
+\subfloat[Convex]{
 \begin{tikzpicture}
 
 
@@ -35,4 +19,22 @@
 
 
 \end{tikzpicture}}
+\pause
+\hfill\subfloat[Non-Convex]{
+\begin{tikzpicture}
+
+
+\graph[default graph]{
+	{[nodes={red node}]2,3,4};
+	{[nodes={blue node}]1,5,6};
+	{[nodes={green node}]7};
+	1 -- 4 -- 6;
+	2 -- 7 -- 4;
+	3 -- 7;
+	2 -- 5 -- 6;
+};
+
+
+\end{tikzpicture}}
+
 \end{figure}
