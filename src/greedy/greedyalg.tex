@@ -6,8 +6,8 @@
 
 \STATE $I \gets \emptyset$
 \WHILE{$I$ is not maximal}
-\STATE $c_{small} \gets \argmin_{\{c : I \cup \{c\} \text{ is independent }\}}|c|$
-\STATE $I \gets I \cup \{ c_{small} \}$
+\STATE $c_{min} \gets \argmin_{\{c : I \cup \{c\} \text{ is independent }\}}|c|$
+\STATE $I \gets I \cup \{ c_{min} \}$
 \ENDWHILE
 \RETURN $I$
 
