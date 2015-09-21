@@ -1,22 +1,30 @@
 \begin{frame}{Pair Packing}
+\begin{minipage}[t]{0.48\linewidth}
 \begin{itemize}
 
+\item<1->\alert{\Pack{}} 
+	\begin{itemize}
+	\item<2->
+	\textbf{connected} subgraph
+	\item<3->
+	exactly \textbf{one} pair
+	\item<4->
+	no singleton
+	\end{itemize}
 
-\item 
-Given a 2-CR instance
+\item<6->
+\alert{Packing}: set of \textbf{color disjoint} \pack{}s
 
-\pause\item
-A \alert{\pack{}} 
-is a \textbf{connected} subgraph that contains \textbf{exactly one pair} 
-and \textbf{does not contain a singleton} 
- 
-\pause\item
-A \alert{packing} is a set of \pack{}s that \textbf{do not share a common color}
-
-\pause\item
-In the \alert{Pair Packing} problem,
-the goal is to find a packing with the \textbf{maximum number of \pack{}s} 
+\item<7->
+Goal: packing with \textbf{maximum number of \pack{}s} 
 
 
 \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\linewidth}
+\onslide<1->{
+\input{pack/pairpacking-fig}
+}
+\end{minipage}
 \end{frame}
