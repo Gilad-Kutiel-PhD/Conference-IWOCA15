@@ -1,20 +1,28 @@
 \begin{frame}{Greedy Algorithm for Pair Packing}
+\begin{columns}[T]
+
+\begin{column}{.5\linewidth}
 
 
 \begin{algorithm}[H]
+\caption*{Greedy Algorithm}
 \begin{algorithmic}[1]
-
 \STATE $I \gets \emptyset$
 \WHILE{$I$ is not maximal}
-\STATE $c_{min} \gets \argmin_{\{c : I \cup \{c\} \text{ is independent }\}}|c|$
-\STATE $I \gets I \cup \{ c_{min} \}$
+\STATE
+$C_{min} \gets \smashoperator{\argmin\limits_{\{C : \{I \cup C\} \text{ is a packing }\}}}|C|$
+\STATE $I \gets I \cup \{ C_{min} \}$
 \ENDWHILE
 \RETURN $I$
-
-
 \end{algorithmic}
-\caption{Greedy Algorithm}
 \end{algorithm}
 
+\end{column}\hfill\begin{column}{.5\linewidth}
 
+
+\input{greedy/greedyeg-fig}
+
+\end{column}\end{columns}
+\vfill
+*$|C|$ is the number of vertices in $C$
 \end{frame}

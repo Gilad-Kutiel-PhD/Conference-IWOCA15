@@ -15,14 +15,14 @@ node distance=15mm,
 {[nodes={orange node}] 7, 8[onslide=<7->{blur}]},
 {[nodes={pink node, }] 9, 10},
 {[nodes={teal node}] 11, 12},
-{[nodes={violet node}] 13, 14},
+{[nodes={violet node}] 14},
 {[nodes={olive node}] 15, 16},
 
 1 -- 2,
 {[edges={onslide=<3->{blur}}]3 -- 2 -- 4},
 5 -- 4 -- 6,
 {[edges={onslide=<5->{blur}}]12 -- 3 --[onslide=<7->{blur}] 8},
-13 -- 9 --[onslide=<7->{blur}] 8 --[onslide=<7->{blur}] 11 -- 10 -- 7,
+9 --[onslide=<7->{blur}] 8 --[onslide=<7->{blur}] 11 -- 10 -- 7,
 15 --[onslide=<7->{blur}] 8 --[onslide=<7->{blur}] 14 -- 16,
 
 5 --[onslide=<5->{blur}] 7 -- 12,
@@ -41,18 +41,18 @@ node distance=15mm,
 
 \onslide<4->{
 \draw[packing]
-(5.south)	to[out=180,in=180]
-(4.north)	to[out=0,in=90]
-(6.east)	to[out=-90,in=0]
+(5.south)	to[out=0,in=0]
+(4.north)	to[out=180,in=90]
+(6.west)	to[out=-90,in=180]
 (5.south);
 }
 
 \onslide<6->{
 \draw[packing]
-(11.north)	to[out=0,in=90]
-(12.east)	to[out=-90,in=90]
-(7.east)	to[out=-90,in=-90]
-(10.west)	to[out=90,in=180]
+(11.north)	to[out=180,in=90]
+(12.west)	to[out=-90,in=180]
+(7.south)	to[out=0,in=-90]
+(10.east)	to[out=90,in=0]
 (11.north);
 }
 
