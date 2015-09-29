@@ -10,8 +10,8 @@
 \STATE $I \gets \emptyset$
 \WHILE{$I$ is not maximal}
 \STATE
-$C_{min} \gets \smashoperator{\argmin\limits_{\{C : \{I \cup C\} \text{ is a packing }\}}}|C|$
-\STATE $I \gets I \cup \{ C_{min} \}$
+$C_{min} \gets \smashoperator{\argmin\limits_{\{C : I \cup C\} \text{ is a packing }\}}}|C|$
+\STATE $I \gets S \cup \{ C_{min} \}$
 \ENDWHILE
 \RETURN $I$
 \end{algorithmic}
@@ -24,5 +24,5 @@ $C_{min} \gets \smashoperator{\argmin\limits_{\{C : \{I \cup C\} \text{ is a pac
 
 \end{column}\end{columns}
 \vfill
-*$|C|$ is the number of vertices in $C$
+* $|C|$ is the number of vertices in $C$
 \end{frame}

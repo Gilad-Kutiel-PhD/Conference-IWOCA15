@@ -1,23 +1,29 @@
 \begin{frame}{The Cost of Retains-All Recoloring}
 Definitions:
 \begin{itemize}
-\boldmath
-\pause\item
-A pair \alert{survives} if both vertices with the same color survive
 
 \pause\item
-$P$: the set of pairs in the input  
+\alert{Pair}: two vertices with the same color
 
 \pause\item
-$I$: the set of survived pairs
- 
+\alert{Singleton}: a vertex with a unique color
+
+\pause\item
+A pair \alert{survives} if its vertices keep their color
+
+\pause\item
+\alert{$P$}: the set of pairs in the input  
+
+\pause\item
+\alert{$S$}: the set of survived pairs
+
 \end{itemize}
 
 \pause\begin{observation}
-The cost of a retains-all recoloring is $|P| - |I|$
+The cost of a retains-all recoloring is $|P| - |S|$
 \end{observation}
 
 \pause
-That is, we would like to \textbf{maximize $|I|$}
+That is, we would like to \textbf{maximize $|S|$}
 
 \end{frame}
