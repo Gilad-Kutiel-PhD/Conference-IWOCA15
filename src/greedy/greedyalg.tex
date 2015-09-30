@@ -7,13 +7,13 @@
 \begin{algorithm}[H]
 \caption{Greedy Algorithm}
 \begin{algorithmic}[1]
-\STATE $I \gets \emptyset$
-\WHILE{$I$ is not maximal}
+\STATE $\mathcal{I} \gets \emptyset$
+\WHILE{$\mathcal{I}$ is not maximal}
 \STATE
-$C_{min} \gets \smashoperator{\argmin\limits_{\{C : I \cup C\} \text{ is a packing }\}}}|C|$
-\STATE $I \gets S \cup \{ C_{min} \}$
+$C_{min} \gets \smashoperator{\argmin\limits_{\{C : \mathcal{I} \cup C\} \text{ is a packing }\}}}|C|$
+\STATE $\mathcal{I} \gets S \cup \{ C_{min} \}$
 \ENDWHILE
-\RETURN $I$
+\RETURN $\mathcal{I}$
 \end{algorithmic}
 \end{algorithm}
 
