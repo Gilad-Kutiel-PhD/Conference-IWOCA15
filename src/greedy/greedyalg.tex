@@ -10,7 +10,7 @@
 \STATE $\mathcal{I} \gets \emptyset$
 \WHILE{$\mathcal{I}$ is not maximal}
 \STATE
-$C_{min} \gets \smashoperator{\argmin\limits_{\{C : \mathcal{I} \cup C\} \text{ is a packing }\}}}|C|$
+$C_{min} \gets \smashoperator{\argmin\limits_{C : \mathcal{I} \cup \{C\} \text{ is a packing }}}|C|$
 \STATE $\mathcal{I} \gets S \cup \{ C_{min} \}$
 \ENDWHILE
 \RETURN $\mathcal{I}$
