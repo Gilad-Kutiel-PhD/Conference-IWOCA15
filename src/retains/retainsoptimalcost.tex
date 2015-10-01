@@ -1,29 +1,47 @@
 \begin{frame}{The Cost of Retains-All Recoloring}
-Definitions:
+\begin{columns}[T]
+\begin{column}{.61\linewidth}
+
+\def\pRed{\{\inlinenode{red}{1},\inlinenode{red}{3}\}}
+\def\pGreen{\{\inlinenode{green}{2},\inlinenode{green}{5}\}}
+\def\pOrange{\{\inlinenode{orange}{6},\inlinenode{orange}{7}\}}
+
+Input:
 \begin{itemize}
 
-\pause\item
-\alert{Pair}: two vertices with the same color (input)
+\item<2->
+\alert{Pair}: \pRed{}
 
-\pause\item
-\alert{Singleton}: a vertex with a unique color (input)
+\item<3->
+\alert{Singleton}: \inlinenode{blue}{4}
 
-\pause\item
-A pair \alert{survives} if its vertices keep their color
-
-\pause\item
-\alert{$P$}: the set of pairs (input)  
-
-\pause\item
-\alert{$S$}: the set of survived pairs (under some recoloring)
-
+\item<4->
+\alert{$P$}:\{\pRed{}, \pGreen{}, \pOrange{}\}
 \end{itemize}
 
-\pause\begin{observation}
-The cost of a retains-all recoloring is $|P| - |S|$
+\onslide<5->{Output:}
+\begin{itemize}
+\item<6->
+\pOrange{} \alert{survives}
+
+\item<7->
+\alert{$S$}: \{\pGreen{}, \pOrange{}\}  
+\end{itemize}
+ 
+\onslide<8->{
+\begin{observation}
+The cost is $|P| - |S|$
 \end{observation}
+}
 
-\pause
-That is, we would like to \textbf{maximize $|S|$}
+\onslide<9->{
+\textbf{Goal}: maximize $|S|$
+}
 
+\end{column}
+\hfill
+\begin{column}{.39\linewidth}
+\input{retains/def-fig}
+\end{column}
+\end{columns}
 \end{frame}

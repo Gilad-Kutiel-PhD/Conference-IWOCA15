@@ -1,6 +1,3 @@
-% \author{Reuven Bar-Yehuda, \textbf{Gilad Kutiel}, Dror Rawitz}
-
-
 \setbeamertemplate{navigation symbols}{
 \usebeamerfont{footline}
 \usebeamercolor[fg]{footline}
@@ -16,6 +13,8 @@
 \def\refsize{\tiny}
 \def\pack{component}
 \def\Pack{Component}
+
+\newcommand{\inlinenode}[2]{\tikz[baseline=-3pt] \node[#1 node, small node] {#2};}
 
 \definecolor{notecolor}{RGB}{255, 252, 179}
 
@@ -49,6 +48,9 @@
 	uncolored node/.style={colored node, fill=none},
 %
 %
+	small node/.style={minimum size=5mm},
+%
+%	
 	colored path/.style={
 		red,
 		thick,
